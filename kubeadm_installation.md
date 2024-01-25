@@ -33,7 +33,6 @@ Note: Expose port 6443 in the Security group for the Worker to connect to Master
 
 ### Worker Node
 ```
-sudo kubeadm reset pre-flight checks
 sudo <join_token> --v=5
 ```
 
