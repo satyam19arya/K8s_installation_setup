@@ -34,14 +34,9 @@ Build the cluster
 kops update cluster demok8scluster1.k8s.local --yes --state=s3://kops-storage
 ```
 
-Verify it
-```
-kops validate cluster demok8scluster1.k8s.local
-```
-
 To delete the cluster
 ```
-kops delete cluster --name ${NAME} --yes
+kops delete cluster --name demok8scluster1.k8s.local --yes --state=s3://kops-storage
 ```
 
 Ref: https://kops.sigs.k8s.io/getting_started/aws/
