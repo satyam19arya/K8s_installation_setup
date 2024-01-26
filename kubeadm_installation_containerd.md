@@ -103,6 +103,7 @@ To Install Calico
 ```
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/tigera-operator.yaml
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/custom-resources.yaml -O
+kubectl create -f custom-resources.yaml
 ```
 Verify Calico installation in your cluster
 ```
