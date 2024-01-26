@@ -40,3 +40,5 @@ kops delete cluster --name demok8scluster1.k8s.local --yes --state=s3://kops-sto
 ```
 
 Ref: https://kops.sigs.k8s.io/getting_started/aws/
+
+Note: All instances created by kops will be built within ASG (Auto Scaling Groups), which means each instance will be automatically monitored and rebuilt by AWS if it suffers any failure.
