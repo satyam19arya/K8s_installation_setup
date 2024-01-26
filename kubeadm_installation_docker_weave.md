@@ -39,6 +39,6 @@ sudo <join_token> --v=5
 ### Verify
 ```
 kubectl get nodes
-kubectl run hello-world-pod --image=busybox --restart=Never --command -- sh -c "echo 'Hello World' && sleep 3600"
+kubectl run hello-world-pod --image=nginx
 kubectl get pods
 ```
