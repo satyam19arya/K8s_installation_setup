@@ -1,7 +1,7 @@
-### Using Terraform
+# Using Terraform
 https://github.com/satyam19arya/K8s_EKS_terraform
 
-### Using eksctl
+# Using eksctl
 Pre-requisites
 - AWS CLI
 - kubectl
