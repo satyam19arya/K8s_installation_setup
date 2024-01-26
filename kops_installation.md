@@ -26,7 +26,7 @@ aws s3api put-bucket-versioning --bucket kops-storage --versioning-configuration
 
 Create the cluster
 ```
-kops create cluster --name=demok8scluster1.k8s.local --state=s3://kops-storage --zones=us-east-1a --node-count=2 --node-size=t2.medium --master-size=t2.medium  --master-volume-size=15 --node-volume-size=15
+kops create cluster --name=demok8scluster1.k8s.local --state=s3://kops-storage --zones=us-east-1a --node-count=2 --node-size=t2.medium --control-plane-size=t2.medium  --control-plane-volume-size=15 --node-volume-size=15
 ```
 
 Build the cluster
