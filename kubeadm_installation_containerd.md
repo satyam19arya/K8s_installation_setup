@@ -94,7 +94,7 @@ sudo apt-get update && apt-get install -y kubelet=1.28.2-00 kubectl=1.28.2-00 ku
 sudo apt-mark hold kubelet kubectl
 kubeadm version
 kubeadm upgrade plan
-kubeadm upgrade apply 1.23.0
+kubeadm upgrade apply 1.28.2
 systemctl daemon-reload
 systemctl restart kubelet
 ```
@@ -102,10 +102,13 @@ systemctl restart kubelet
 To Install Calico
 ```
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/tigera-operator.yaml
-curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/custom-resources.yaml -O
-kubectl create -f custom-resources.yaml
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/custom-resources.yaml
 ```
+Note : Before creating this manifest, read its contents and make sure its settings are correct for your environment. For example, you may need to change the default IP pool CIDR to match your pod network CIDR.
+
 Verify Calico installation in your cluster
 ```
 kubectl get pods -n calico-system
 ```
+
+Ref: https://docs.tigera.io/calico/latest/getting-started/kubernetes/quickstart
