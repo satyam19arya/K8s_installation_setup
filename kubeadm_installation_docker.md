@@ -19,14 +19,14 @@ sudo apt install kubeadm=1.20.0-00 kubectl=1.20.0-00 kubelet=1.20.0-00 -y
 
 ### Master Node
 ```
-sudo kubeadm init
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=1.20.0
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
-Install Weave network
+Install Flannel network
 ```
-kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml```
 ```
 
 Note: Expose port 6443 in the Security group for the Worker to connect to Master Node
