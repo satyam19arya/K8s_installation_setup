@@ -26,7 +26,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 Install Flannel network
 ```
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml```
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
 Note: Expose port 6443 in the Security group for the Worker to connect to Master Node
