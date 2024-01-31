@@ -15,6 +15,9 @@ chmod +x kops
 sudo mv kops /usr/local/bin/kops
 ```
 
+> [!IMPORTANT]
+> Amazon S3 bucket name must be unique
+
 Create S3 bucket to store the state of your cluster
 ```
 aws s3api create-bucket --bucket kops-storage --region us-east-1
@@ -38,7 +41,7 @@ To delete the cluster
 ```
 kops delete cluster --name demok8scluster1.k8s.local --yes --state=s3://kops-storage
 ```
+> [!NOTE]
+> All instances created by kops will be built within ASG (Auto Scaling Groups), which means each instance will be automatically monitored and rebuilt by AWS if it suffers any failure.
 
 Ref: https://kops.sigs.k8s.io/getting_started/aws/
-
-Note: All instances created by kops will be built within ASG (Auto Scaling Groups), which means each instance will be automatically monitored and rebuilt by AWS if it suffers any failure.
