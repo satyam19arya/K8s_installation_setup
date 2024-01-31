@@ -29,7 +29,8 @@ Install Flannel network
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
-Note: Expose port 6443 in the Security group for the Worker to connect to Master Node
+> [!NOTE]
+> Expose port 6443 in the Security Group for the Worker Node to connect to Master Node
 
 ### Worker Node
 ```

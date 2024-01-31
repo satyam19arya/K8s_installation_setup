@@ -1,7 +1,7 @@
-# Using Terraform
-https://github.com/satyam19arya/K8s_EKS_terraform
+# Method 1
+[Using Terraform](https://github.com/satyam19arya/K8s_EKS_terraform)
 
-# Using eksctl
+#  Method 2 [Using eksctl]
 Pre-requisites
 - AWS CLI
 - kubectl
@@ -33,12 +33,12 @@ eksctl version
 
 Setup EKS Cluster
 ```
-eksctl create cluster --name three-tier-cluster --region us-east-1 --node-type t2.medium --nodes-min 2 --nodes-max 2
-aws eks update-kubeconfig --region us-east-1 --name three-tier-cluster
+eksctl create cluster --name <cluster_name> --region us-east-1 --node-type t2.medium --nodes-min 2 --nodes-max 2
+aws eks update-kubeconfig --region us-east-1 --name <cluster_name>
 kubectl get nodes
 ```
 
 To delete EKS Cluster
 ```
-eksctl delete cluster --name three-tier-cluster --region us-east-1
+eksctl delete cluster --name <cluster_name> --region us-east-1
 ```
