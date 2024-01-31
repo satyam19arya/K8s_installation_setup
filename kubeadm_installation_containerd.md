@@ -1,4 +1,5 @@
-Note: Expose port 6443 in the Security group for the Worker to connect to Master Node
+> [!NOTE]
+> Expose port 6443 in the Security Group for the Worker Node to connect to Master Node
 
 ### Installing a container runtime (containerd) (Both Master and Worker)
 ```
@@ -29,7 +30,7 @@ containerd config default > /etc/containerd/config.toml
 ```
 vim /etc/containerd/config.toml
 ```
-SystemdCgroup = true
+> SystemdCgroup = true
 ```
 systemctl restart containerd
 ```
@@ -104,7 +105,8 @@ To Install Calico
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/tigera-operator.yaml
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/custom-resources.yaml
 ```
-Note : Before creating this manifest, read its contents and make sure its settings are correct for your environment. For example, you may need to change the default IP pool CIDR to match your pod network CIDR.
+> [!NOTE]
+> Before creating this manifest, read its contents and make sure its settings are correct for your environment. For example, you may need to change the default IP pool CIDR to match your pod network CIDR.
 
 Verify Calico installation in your cluster
 ```
