@@ -1,7 +1,9 @@
-# Method 1
+## Method 1
 [Using Terraform](https://github.com/satyam19arya/K8s_EKS_terraform)
 
-#  Method 2 [Using eksctl]
+##  Method 2 
+[Using eksctl](https://eksctl.io/getting-started/)
+
 Pre-requisites
 - AWS CLI
 - kubectl
